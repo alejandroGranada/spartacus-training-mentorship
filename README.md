@@ -22,7 +22,7 @@ Your SAP Commerce development environment should include the following:
     ```
 6.  If you receive and error `zsh: command not found: java` follow these steps
     * Open the **Terminal** app and write `cd ~` to go to your home folder
-    * Open you profile file with your preferred editor (here I will use `nano`)
+    * Open your profile file with your preferred editor (here I will use `nano`)
         - For > MacOS Catalina, execute `nano .zshrc`
         - For Old MacOS version, execute `nano .bash_profile`
     * Add the following and save it:
@@ -38,7 +38,7 @@ Your SAP Commerce development environment should include the following:
 2.  Choose version **apache-ant-1.10.9-bin.zip** and download it
 3.  Open the Finder app, unzip the file and paste extracted the folder on your HOME folder (Go -> Go to Folder -> `~/`)
 4.  Open your **Terminal** app
-5.  Open you profile file with your preferred editor (here I will use `nano`)
+5.  Open your profile file with your preferred editor (here I will use `nano`)
     - For > MacOS Catalina, execute `nano .zshrc`
     - For Old MacOS version, execute `nano .bash_profile`
 6.  Add the following lines and save
@@ -118,7 +118,7 @@ Use the next steps to install the project. Please make sure you change all refer
 4.  Now is the time to configure some aliases and the Hybris optional config directory (pointing to our local configuration):
 
     * Download the [.spartacus-training-profile](https://drive.google.com/file/d/1qCkuF1ukZY0JtxiGRnGhRIcEWq_ydYFg/view?usp=sharing) and change the paths accordingly.
-    * Place you file at the root of the repository (make sure the name starts with a dot)
+    * Place your file at the root of the repository (make sure the name starts with a dot)
     * Add your file in your .zshrc (> MacOS Catalina) or .bash_profile (Older MacOS versions). Make sure .zshrc file looks similar to the [sample .zshrc](https://drive.google.com/file/d/1OBOCutdWVE4GsfE1gpKgiQaul0R8XYTy/view?usp=sharing). Please change the references to <your-user> to the values that apply to you.
     * Quit the Terminal (`command(⌘) + q`) and re-open it.
     * Run ```echo $HYBRIS_OPT_CONFIG_DIR``` to make sure it was configured properly.
@@ -128,7 +128,7 @@ Use the next steps to install the project. Please make sure you change all refer
     * If you don't have Homebrew, please install it using the command ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
     * Install ImageMagick using the command ```brew install imagemagick```
 
-6.  Create you local configuration properties by downloading the [sample 20-local.properties](https://drive.google.com/file/d/1W2IQrjc2M5RzDah-ZzDoNTfbTzDCVVnS/view?usp=sharing), changing the values that correspond to your local machine and placing the file in ```/Users/<youruser>/clients/talos/spartacus-training-project/hybris/bin/custom/core-customize/project/env/local```
+6.  Create your local configuration properties by downloading the [sample 20-local.properties](https://drive.google.com/file/d/1W2IQrjc2M5RzDah-ZzDoNTfbTzDCVVnS/view?usp=sharing), changing the values that correspond to your local machine and placing the file in ```/Users/<youruser>/clients/talos/spartacus-training-project/hybris/bin/custom/core-customize/project/env/local```
 
 7.  Install hybris code base into your folder structure by running the command
     ```tcproject && ant install -Dhybris.zip.package.src=/path/to/your/CXCOMM201100P_0-70005693.ZIP```
