@@ -1,0 +1,1 @@
+export * from './tc-occ-user-profile.adapter'

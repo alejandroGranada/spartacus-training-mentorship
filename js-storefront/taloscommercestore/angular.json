@@ -37,7 +37,10 @@
               "src/styles/spartacus/user.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/styles", "src/styles/scss"]
+              "includePaths": [
+                "src/styles",
+                "src/styles/scss"
+              ]
             },
             "scripts": []
           },
@@ -191,5 +194,8 @@
       }
     }
   },
-  "defaultProject": "taloscommercestore"
+  "defaultProject": "taloscommercestore",
+  "cli": {
+    "analytics": "1556f842-7db8-44a8-8190-6dd8307f023e"
+  }
 }

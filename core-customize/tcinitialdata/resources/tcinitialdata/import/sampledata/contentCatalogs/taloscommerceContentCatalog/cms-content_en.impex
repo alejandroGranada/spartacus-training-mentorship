@@ -466,6 +466,7 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]    ; link
                        ;                          ; UpdatePasswordLink    ; "Password"
                        ;                          ; WebcamsCategoryLink   ; "Webcams"
                        ;                          ; SignOutLink           ; "Sign Out"
+                       ;                          ; UserProfileLink       ; "User Profile"
 
 # CMS Navigation Nodes
 UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
