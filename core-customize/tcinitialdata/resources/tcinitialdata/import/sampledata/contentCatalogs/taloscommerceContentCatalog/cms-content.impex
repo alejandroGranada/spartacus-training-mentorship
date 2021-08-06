@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------
 $contentCatalog = taloscommerceContentCatalog
 $contentCatalogName = Talos Commerce Content Catalog
-$contentCV = catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]), CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$contentCV = catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]), CatalogVersion.version[default=Online])[default=$contentCatalog:Online]
 $productCatalog = taloscommerceProductCatalog
 $productCatalogName = Talos Commerce Product Catalog
 $productCV = catalogVersion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
