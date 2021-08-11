@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project name="talos_quality">
+
+  <path id="tools.classpath">
+      <fileset dir="./quality/lib">
+          <include name="**/*.jar"/>
+      </fileset>
+  </path>
+
+<!-- Source files to analyse -->
+  <path id="project.sourcepath">
+    <fileset dir="${HYBRIS_BIN_DIR}/custom">
+        <include name="**/src/**/*.java"/>
+        <!-- Exclude generated source files -->
+        <exclude name="**/gensrc/**/*.java"/>
+        <exclude name="**/jalo/**/*.java"/>
+    </fileset>
+  </path>
+
+  <!-- Checkstyle -->
+  <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties" classpathref="tools.classpath"/>
+
+  <target name="checkstyle" description="Generates a report of code convention violations.">
+    <mkdir dir="./quality/reports/checkstyle"/>
+    <checkstyle config="./quality/checkstyle/checkstyle.xml" failureProperty="checkstyle.failure" failOnViolation="false">
+      <formatter type="plain"/>
+      <formatter type="xml" tofile="./quality/reports/checkstyle/checkstyle_report.xml"/>
+      <path refid="project.sourcepath" />
+    </checkstyle>
+
+    <xslt in="./quality/reports/checkstyle/checkstyle_report.xml" style="./quality/checkstyle/checkstyle-report-template.xsl"
+          out="./quality/reports/checkstyle/checkstyle_report.html"/>
+    <fail message="Checkstyle failed : ${checkstyle.failure}" if="checkstyle.failure"/>
+  </target>
+
+</project>
+

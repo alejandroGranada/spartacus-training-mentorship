@@ -2,7 +2,7 @@
  *
  * An interface representing a referred customer
  */
-export interface OccReferredCustomer {
+ export interface OccReferredCustomer {
   email: string;
   documentTypeCode: string;
   documentType?: string;
@@ -13,7 +13,7 @@ export interface OccReferredCustomer {
 
 /**
  *
- * An interface representing B2bUnit list of security questions
+ * An interface representing a list of referred customers
  */
 export interface OccReferredCustomerList {
   referredCustomers?: OccReferredCustomer[];
